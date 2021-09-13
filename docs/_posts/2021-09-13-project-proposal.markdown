@@ -1,29 +1,17 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-09-12 16:52:45 -0700
-categories: jekyll update
+title:  "Project Proposal"
+date:   2021-09-13 16:52:45 -0700
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+# Using Generative Adversarial Networks to Simulate and Train against Adversarial Attackers.
 
-Jekyll requires blog post files to be named according to the following format:
+Neural Nets are increasingly being used in higher and higher risk scenarios. See: self driving cars. This means the need for Neural Nets' to be robust against malicious actors will only continue to increase. Currently, even state of the art models can be tricked using relatively modest means. For example, in 2018 Eykholt et. al. were able to get models to misclassify stop signs using only a few small square stickers [(source)](https://arxiv.org/pdf/1707.08945.pdf). I propose using a Generative Adversarial Network to, on one side, simulate the actions of a malicious actor, and, on the other side, create a model that is more robust against adversarial attacks. Malicious actions will be simulated via data augmentation. 
 
-`YEAR-MONTH-DAY-title.MARKUP`
+![Example from aforementioned paper of using stickers to trick a Neural Net](https://labs.sogeti.com/wp-content/uploads/2020/05/Stop.jpg)
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Here is an example from the aforementioned paper of using stickers to trick a Neural Net.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+## Goals:
+1. Create a method of data augmentation that simulates the actions of real world adversaries on deployed models.
+2. Use this data augmentation to create a GAN that will simulate and train a model against these attacks.
+3. Compare the resilience of the post GAN model with a model trained on the same set of images but without the GAN/data augmentation.
