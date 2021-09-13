@@ -5,9 +5,9 @@ date:   2021-09-13 16:52:45 -0700
 ---
 # Using Generative Adversarial Networks to Simulate and Train against Adversarial Attackers.
 
-Neural Nets are increasingly being used in higher and higher risk scenarios. See: self driving cars. This means the need for Neural Nets' to be robust against malicious actors will only continue to increase. Currently, even state of the art models can be tricked using relatively modest means. For example, in 2018 Eykholt et. al. were able to get models to misclassify stop signs using only a few small square stickers [(source)](https://arxiv.org/pdf/1707.08945.pdf). I propose using a Generative Adversarial Network to, on one side, simulate the actions of a malicious actor, and, on the other side, create a model that is more robust against adversarial attacks. Malicious actions will be simulated via data augmentation. 
+Neural nets are increasingly being used in higher and higher risk scenarios. See: self driving cars. This means the need for Neural Nets' to be robust against malicious actors will only continue to increase. Currently, even state of the art models can be tricked using relatively modest means. For example, in 2018 the researchers Eykholt et al. were able to get models to misclassify stop signs 100% of the time using only a few small square stickers [(source)](https://arxiv.org/pdf/1707.08945.pdf). I propose using a Generative Adversarial Network to, on one side, simulate the actions of a malicious actor, and, on the other side, create a model that is more robust against adversarial attacks. This project will span multiple subjects including hacking neural networks, GANs, and data augmentation.
 
-![Example from aforementioned paper of using stickers to trick a Neural Net](https://labs.sogeti.com/wp-content/uploads/2020/05/Stop.jpg)
+![A stop sign with black and white stickers on it.](https://labs.sogeti.com/wp-content/uploads/2020/05/Stop.jpg)
 
 Here is an example from the aforementioned paper of using stickers to trick a Neural Net.
 
